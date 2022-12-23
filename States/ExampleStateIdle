@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleStateIdle : ExampleStateBase
+{
+    public ExampleStateIdle(ExampleStateMachine ctx, ExampleStateFactory factory)
+    {
+        this.ctx = ctx;
+        this.factory = factory;
+    }
+
+    public override void EnterState() { }
+    public override void UpdateState() { }
+    public override void ExitState() { }
+}
