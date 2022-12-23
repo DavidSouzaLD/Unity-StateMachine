@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExampleStateFactory : MonoBehaviour
+public class ExampleStateFactory
 {
     public ExampleStateFactory(ExampleStateMachine ctx)
     {
