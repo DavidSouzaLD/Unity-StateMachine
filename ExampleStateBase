@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public abstract class ExampleStateBase
+{
+    public ExampleStateMachine ctx { get; set; }
+    public ExampleStateFactory factory { get; set; }
+    public abstract void EnterState();
+    public abstract void UpdateState();
+    public abstract void ExitState();
+}
