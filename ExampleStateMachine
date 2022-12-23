@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleStateMachine : MonoBehaviour
+{
+    public ExampleVariables variables = new AIVariables();
+    private ExampleStateFactory factory;
+    private ExampleStateBase currentState;
+
+    private void Awake()
+    {
+        // Setup
+        factory = new ExampleStateFactory(this);
+        currentState = factory.IdleState();
+        currentState.EnterState();
+    }
+
+    private void Update()
+    {
+        currentState.UpdateState();
+    }
+
+    public void ChangeState(ExampleStateBase newState)
+    {
+        currentState.ExitState();
+        currentState = newState;
+        currentState.EnterState();
+    }
+}
