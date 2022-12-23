@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleStateFactory : MonoBehaviour
+{
+    public ExampleStateFactory(ExampleStateMachine ctx)
+    {
+        this.ctx = ctx;
+    }
+
+    private ExampleStateMachine ctx;
+
+    public ExampleStateIdle IdleState()
+    {
+        return new ExampleStateIdle(ctx, this);
+    }
+}
