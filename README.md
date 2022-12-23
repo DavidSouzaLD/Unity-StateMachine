@@ -1,1 +1,1 @@
-Simple State Finite Machine for Unity.
+Simple Finite State Machine for Unity.
