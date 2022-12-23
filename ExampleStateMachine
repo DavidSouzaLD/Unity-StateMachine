@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExampleStateMachine : MonoBehaviour
 {
-    public ExampleVariables variables = new AIVariables();
+    public ExampleVariables variables = new ExampleStateFactoryVariables();
     private ExampleStateFactory factory;
     private ExampleStateBase currentState;
 
